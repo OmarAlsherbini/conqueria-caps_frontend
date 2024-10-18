@@ -40,6 +40,10 @@ This repository contains the **frontend** source code for **Conqueria Caps**, bu
    ```
 
 2. **Install dependencies**:
+> [!IMPORTANT]  
+> This project uses `enzyme` for testing with `jest`. However, there is a conflicting peer dependencies between React 18 and Enzyme's React 17 adapter. Enzyme does not yet officially support a React 18 adapter, which is why enzyme-adapter-react-18 doesn't exist in the npm registry. However, there is a workaround using a community-maintained package called `@wojtekmaj/enzyme-adapter-react-17` that works with React 18 in most cases. This adapter is compatible with React 18 until the official React 18 adapter is released. <br><br>
+> Before installation, run `npm config set legacy-peer-deps true` to bypass the error.
+
    Using npm:
    ```bash
    npm install
