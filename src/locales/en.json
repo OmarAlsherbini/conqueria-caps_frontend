@@ -1,0 +1,22 @@
+{
+  "adminDashboard": {
+    "title": "Admin Dashboard",
+    "description": "Manage users, territories, and game settings."
+  },
+  "game": {
+    "title": "Game Page",
+    "description": "Start playing Conqueria Caps now!"
+  },
+  "home": {
+    "title": "Conqueria Caps",
+    "description": "Conquer, manage, and dominate your territories"
+  },
+  "login": {
+    "title": "Login",
+    "button": "Log In"
+  },
+  "profile": {
+    "title": "Profile Page",
+    "description": "Build your profile on Conqueria Caps now!"
+  }
+}

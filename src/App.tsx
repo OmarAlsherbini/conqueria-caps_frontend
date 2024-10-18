@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { routes } from './routes/routes';
 // import Breadcrumbs from './utils/components/breadcrumbs';
 import './App.css'
+import './config/i18n';
 
 function App() {
 

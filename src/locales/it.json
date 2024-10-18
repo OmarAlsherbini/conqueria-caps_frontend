@@ -1,0 +1,22 @@
+{
+  "adminDashboard": {
+    "title": "Pannello di controllo amministratore",
+    "description": "Gestisci utenti, territori e impostazioni di gioco."
+  },
+  "game": {
+    "title": "Pagina di gioco",
+    "description": "Inizia a giocare a Conqueria Caps ora!"
+  },
+  "home": {
+    "title": "Conqueria Caps",
+    "description": "Conquista, gestisci e domina i tuoi territori"
+  },
+  "login": {
+    "title": "Accesso",
+    "button": "Accedi"
+  },
+  "profile": {
+    "title": "Pagina del profilo",
+    "description": "Crea il tuo profilo su Conqueria Caps ora!"
+  }
+}

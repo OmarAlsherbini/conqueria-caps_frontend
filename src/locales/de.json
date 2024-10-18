@@ -1,0 +1,22 @@
+{
+  "adminDashboard": {
+    "title": "Admin-Dashboard",
+    "description": "Verwalten Sie Benutzer, Gebiete und Spieleinstellungen."
+  },
+  "game": {
+    "title": "Spielseite",
+    "description": "Beginnen Sie jetzt Conqueria Caps zu spielen!"
+  },
+  "home": {
+    "title": "Conqueria Caps",
+    "description": "Erobern, verwalten und dominieren Sie Ihre Gebiete"
+  },
+  "login": {
+    "title": "Anmeldung",
+    "button": "Einloggen"
+  },
+  "profile": {
+    "title": "Profilseite",
+    "description": "Erstellen Sie jetzt Ihr Profil auf Conqueria Caps!"
+  }
+}
