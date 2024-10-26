@@ -1,6 +1,7 @@
 // src/pages/game/Game.tsx
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from '../../../components/common/organisms/LanguageSwitcher/LanguageSwitcher';
 
 const Game: React.FC = () => {
 
@@ -10,6 +11,7 @@ const Game: React.FC = () => {
     <div className="flex flex-col items-center justify-center h-screen">
       <h1 className="text-3xl font-bold">{t('game.title')}</h1>
       <p className="text-lg mt-4">{t('game.description')}</p>
+      <LanguageSwitcher />
     </div>
   );
 };

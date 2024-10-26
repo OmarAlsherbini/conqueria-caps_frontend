@@ -1,6 +1,7 @@
 // src/pages/login/Login.tsx
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from '../../../components/common/organisms/LanguageSwitcher/LanguageSwitcher';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -39,6 +40,7 @@ const Login: React.FC = () => {
         {t('login.button')}
         </button>
       </form>
+      <LanguageSwitcher />
     </div>
   );
 };
