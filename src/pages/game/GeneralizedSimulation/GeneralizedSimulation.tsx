@@ -18,12 +18,20 @@ import {
   TurretSprite 
 } from '../../../types/simulationTypes';
 import mapData from '../../../assets/maps/map1/map1.json';
+import LoadingScreen from '../../../components/common/organisms/LoadingScreen/LoadingScreen';
 
 const GeneralizedSimulation: React.FC = () => {
   const pixiContainer = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const rendererRef = useRef<IRenderer<ICanvas>>();
   const appRef = useRef<Application>();
   const [isAppInitialized, setIsAppInitialized] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [loadingProgress, setLoadingProgress] = useState(0);
+  const [loadingMessage, setLoadingMessage] = useState('');
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [fadeIn, setFadeIn] = useState(false);
+
 
   // Define the original game dimensions
   const gameWidth = 4000;
@@ -52,12 +60,34 @@ const GeneralizedSimulation: React.FC = () => {
 
     // Initialize the PixiJS application
     const app = new Application({
-      width: appWidth,
-      height: appHeight,
-      backgroundColor: 0xffffff,
+      resizeTo: window, // Add this line to make the app resize to the window
+      backgroundColor: 0x000000,
       resolution: window.devicePixelRatio || 1,
       autoDensity: true,
     });
+
+    // Adjust the stage scaling and position when the window is resized
+    const resize = () => {
+      const gameAspectRatio = gameWidth / gameHeight;
+      const windowAspectRatio = window.innerWidth / window.innerHeight;
+
+      let scale;
+      if (windowAspectRatio >= gameAspectRatio) {
+        scale = window.innerHeight / gameHeight;
+      } else {
+        scale = window.innerWidth / gameWidth;
+      }
+
+      app.stage.scale.set(scale, -scale);
+
+      const scaledGameHeight = gameHeight * scale;
+      const verticalOffset = (app.renderer.height - scaledGameHeight) / 2;
+      app.stage.position.set(0, app.renderer.height - verticalOffset);
+    };
+
+    // Call resize initially and on window resize
+    resize();
+    window.addEventListener('resize', resize);
 
     // Flip the y-axis
     app.stage.scale.y = -1;
@@ -97,8 +127,15 @@ const GeneralizedSimulation: React.FC = () => {
     sound: any,
   ) => {
     try {
+      // Update loading message
+      setLoadingMessage('Fetching simulation data...');
+      
       // Fetch simulation data
       const simulationData = await fetchGeneralizedSimulationData();
+
+      // Update progress
+      setLoadingProgress(25);
+      setLoadingMessage('Processing simulation data...');
 
       // Extract troop types and turret types from simulationData
       const troopTypes = simulationData.troop_info;
@@ -156,9 +193,6 @@ const GeneralizedSimulation: React.FC = () => {
       // Load path data for all paths used in the simulation
       // Collect path IDs from the simulation data
 
-
-
-
       const pathIds = [1, 4, 6, 8, 9];
       // const pathIds = new Set<number>();
       // for (const troopEvent of simulationData.troop_events) {
@@ -170,8 +204,16 @@ const GeneralizedSimulation: React.FC = () => {
         pathsData[pathId] = pathDataModule.default; // Assuming default export
       }
 
+
+      // Define the progress handler
+      const progressHandler = (progress: number) => {
+        const percentage = Math.round(progress * 100);
+        setLoadingProgress(percentage);
+        setLoadingMessage(`Loading assets... ${percentage}%`);
+      };
+
       // Load all assets
-      await Assets.load(Object.values(assetsToLoad));
+      await Assets.load(Object.values(assetsToLoad), progressHandler);
 
       // Load sounds
       for (const key in assetsToLoad) {
@@ -182,13 +224,27 @@ const GeneralizedSimulation: React.FC = () => {
         }
       }
 
+      // Update progress to 100%
+      setLoadingProgress(100);
+      setLoadingMessage('Assets loaded. Starting simulation...');
+      
+      // Intentional delay before starting simulation
+      const delayDuration = 1500; // Milliseconds
+      await new Promise(resolve => setTimeout(resolve, delayDuration));
+      
+      setIsLoaded(true); // Loading is complete
+      
+      // Start fade-in transition after intentional delay
+      const fadeInDelay = 500; // Milliseconds
+      setTimeout(() => {
+        setFadeIn(true);
+      }, fadeInDelay);
+
       // Play background music
       if (!sound.exists('backgroundMusic')) {
         sound.add('backgroundMusic', assetsToLoad['backgroundMusic']);
       }
       sound.play('backgroundMusic', { loop: true, volume: 0.3 });
-
-
 
       // Run the simulation
       await runSimulation(simulationData, assetsToLoad, sound, gameWidth, gameHeight, pathsData);
@@ -203,6 +259,21 @@ const GeneralizedSimulation: React.FC = () => {
       console.error('App not initialized yet');
       return;
     }
+
+    // Request full screen
+    if (containerRef.current) {
+      const elem = containerRef.current;
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if ((elem as any).webkitRequestFullscreen) {
+        (elem as any).webkitRequestFullscreen();
+      } else if ((elem as any).msRequestFullscreen) {
+        (elem as any).msRequestFullscreen();
+      }
+    }
+
+    setIsLoading(true);
+
     // Dynamically import @pixi/sound
     const { sound } = await import('@pixi/sound');
     soundRef.current = sound;
@@ -878,19 +949,29 @@ const GeneralizedSimulation: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-start">
-      <button
-        onClick={startSimulation}
-        disabled={!isAppInitialized}
-        className="mb-4 ml-4 px-4 py-2 bg-blue-500 text-white rounded"
-      >
-        Start Simulation
-      </button>
-      <div
-        ref={pixiContainer}
-        className="w-full h-full flex-grow"
-        style={{ overflow: 'hidden' }}
-      ></div>
+    <div
+      className="flex flex-col items-start"
+      style={{ position: 'relative', width: '100%', height: '100%' }}
+    >
+      {!isLoading && (
+        <button
+          onClick={startSimulation}
+          disabled={!isAppInitialized}
+          className="mb-4 ml-4 px-4 py-2 bg-blue-500 text-white rounded"
+        >
+          Start Simulation
+        </button>
+      )}
+      <div ref={containerRef} className="flex flex-col items-start" style={{ position: 'relative', width: '100%', height: '100%' }}>
+        <div
+          ref={pixiContainer}
+          className={`pixi-container w-full h-full flex-grow ${fadeIn ? 'fade-in' : ''}`}
+          style={{ overflow: 'hidden', opacity: isLoaded ? 1 : 0 }}
+        ></div>
+        {isLoading && !fadeIn && (
+          <LoadingScreen progress={loadingProgress} message={loadingMessage} />
+        )}
+      </div>
     </div>
   );
 };

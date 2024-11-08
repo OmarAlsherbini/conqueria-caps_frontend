@@ -26,6 +26,7 @@
     "@pixi/spritesheet": "^7.4.2",
     "@pixi/ticker": "^7.4.2",
     "@reduxjs/toolkit": "^2.3.0",
+    "@types/styled-components": "^5.1.34",
     "axios": "^1.7.7",
     "i18next": "^23.16.0",
     "pixi.js": "^8.5.2",
