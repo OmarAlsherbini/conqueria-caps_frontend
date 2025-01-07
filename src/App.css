@@ -1,8 +1,19 @@
+html,
+body,
 #root {
   max-width: 1280px;
+  height: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+.fade-in {
+  animation: fadeInAnimation 1s forwards;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 .logo {
@@ -16,6 +27,15 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes logo-spin {

@@ -1,0 +1,95 @@
+{"frames": {
+
+"flame000.png":
+{
+	"frame": {"x":0,"y":0,"w":380,"h":510},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":380,"h":510},
+	"sourceSize": {"w":380,"h":510}
+},
+"flame001.png":
+{
+	"frame": {"x":380,"y":0,"w":380,"h":510},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":380,"h":510},
+	"sourceSize": {"w":380,"h":510}
+},
+"flame002.png":
+{
+	"frame": {"x":760,"y":0,"w":380,"h":510},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":380,"h":510},
+	"sourceSize": {"w":380,"h":510}
+},
+"flame003.png":
+{
+	"frame": {"x":1140,"y":0,"w":380,"h":510},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":380,"h":510},
+	"sourceSize": {"w":380,"h":510}
+},
+"flame004.png":
+{
+	"frame": {"x":1520,"y":0,"w":380,"h":510},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":380,"h":510},
+	"sourceSize": {"w":380,"h":510}
+},
+"flame005.png":
+{
+	"frame": {"x":0,"y":510,"w":380,"h":510},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":380,"h":510},
+	"sourceSize": {"w":380,"h":510}
+},
+"flame006.png":
+{
+	"frame": {"x":380,"y":510,"w":380,"h":510},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":380,"h":510},
+	"sourceSize": {"w":380,"h":510}
+},
+"flame007.png":
+{
+	"frame": {"x":760,"y":510,"w":380,"h":510},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":380,"h":510},
+	"sourceSize": {"w":380,"h":510}
+},
+"flame008.png":
+{
+	"frame": {"x":1140,"y":510,"w":380,"h":510},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":380,"h":510},
+	"sourceSize": {"w":380,"h":510}
+},
+"flame009.png":
+{
+	"frame": {"x":1520,"y":510,"w":380,"h":510},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":380,"h":510},
+	"sourceSize": {"w":380,"h":510}
+}},
+"animations": {
+	"flame": ["flame000.png","flame001.png","flame002.png","flame003.png","flame004.png","flame005.png","flame006.png","flame007.png","flame008.png","flame009.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "flame_spiresheet.png",
+	"format": "RGBA8888",
+	"size": {"w":1900,"h":1020},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:85f3c778d281095dea98c615d85006ef:24e5b5e7ccbfe446d599f7a2c2ecd45d:4518ddf4b96e346e79368a4c828baef7$"
+}
+}

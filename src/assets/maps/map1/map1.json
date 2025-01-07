@@ -1,0 +1,785 @@
+{
+  "id": 1,
+  "name": "Mini ConQ",
+  "number_of_territories": "5",
+  "number_of_continents": "1",
+  "max_number_of_players": "4",
+  "supports_continent_mode": false,
+  "supports_alien_tech_mode": true,
+  "supports_single_territory_mode": true,
+  "supports_naval_warfare": false,
+  "width": 4000,
+  "height": 2200,
+  "map_photo": "map1.png",
+  "genre": "beta",
+  "continents": {
+    "1": {
+      "continent_name": "Mini ConQ",
+      "money_per_turn": 1000,
+      "is_alien": false,
+      "alien_money_per_turn": 0,
+      "continent_territories": {
+        "1": {
+          "name": "Bottom Left",
+          "location": [500, 275],
+          "is_alien": false,
+          "adjacent_territories": [2, 4, 5],
+          "building_slots": {
+            "1": {
+              "location": [400, 687],
+              "targeting_path_ids": {
+                "1": 0.326
+              }
+            },
+            "2": {
+              "location": [500, 425],
+              "targeting_path_ids": {
+                "1": 0.674,
+                "3": 0.936
+              }
+            },
+            "3": {
+              "location": [440, 960],
+              "targeting_path_ids": {
+                "1": 0.299
+              }
+            },
+            "4": {
+              "location": [235, 810],
+              "targeting_path_ids": {
+                "1": 0.239
+              }
+            },
+            "5": {
+              "location": [215, 570],
+              "targeting_path_ids": {
+                "1": 0.768
+              }
+            },
+            "6": {
+              "location": [100, 980],
+              "targeting_path_ids": {
+                "1": 0.143
+              }
+            },
+            "7": {
+              "location": [825, 600],
+              "targeting_path_ids": {
+                "1": 0.519,
+                "3": 0.613
+              }
+            },
+            "8": {
+              "location": [400, 165],
+              "targeting_path_ids": {
+                "1": 0.982,
+                "2": 0.985
+              }
+            },
+            "9": {
+              "location": [90, 385],
+              "targeting_path_ids": {
+                "1": 0.858
+              }
+            },
+            "10": {
+              "location": [1250, 290],
+              "targeting_path_ids": {
+                "2": 0.499
+              }
+            },
+            "11": {
+              "location": [1035, 150],
+              "targeting_path_ids": {
+                "2": 0.688
+              }
+            },
+            "12": {
+              "location": [1460, 150],
+              "targeting_path_ids": {
+                "2": 0.313
+              }
+            },
+            "13": {
+              "location": [715, 250],
+              "targeting_path_ids": {
+                "2": 0.927,
+                "3": 0.845
+              }
+            },
+            "14": {
+              "location": [980, 400],
+              "targeting_path_ids": {
+                "2": 0.628,
+                "3": 0.578
+              }
+            },
+            "15": {
+              "location": [1250, 530],
+              "targeting_path_ids": {
+                "2": 0.5,
+                "3": 0.316
+              }
+            },
+            "16": {
+              "location": [1590, 355],
+              "targeting_path_ids": {
+                "2": 0.332
+              }
+            },
+            "17": {
+              "location": [1785, 200],
+              "targeting_path_ids": {
+                "2": 0.145
+              }
+            },
+            "18": {
+              "location": [1100, 740],
+              "targeting_path_ids": {
+                "3": 0.343
+              }
+            },
+            "19": {
+              "location": [1485, 670],
+              "targeting_path_ids": {
+                "3": 0.077
+              }
+            },
+            "20": {
+              "location": [795, 880]
+            },
+            "21": {
+              "location": [1800, 400]
+            }
+          },
+          "paths": [1, 2, 3]
+        },
+        "2": {
+          "name": "Top Left",
+          "location": [500, 1925],
+          "is_alien": false,
+          "adjacent_territories": [1, 3, 5],
+          "building_slots": {
+            "22": {
+              "location": [400, 1513],
+              "targeting_path_ids": {
+                "4": 0.326
+              }
+            },
+            "23": {
+              "location": [500, 1775],
+              "targeting_path_ids": {
+                "4": 0.674,
+                "6": 0.936
+              }
+            },
+            "24": {
+              "location": [440, 1240],
+              "targeting_path_ids": {
+                "4": 0.299
+              }
+            },
+            "25": {
+              "location": [235, 1390],
+              "targeting_path_ids": {
+                "4": 0.239
+              }
+            },
+            "26": {
+              "location": [215, 1630],
+              "targeting_path_ids": {
+                "4": 0.768
+              }
+            },
+            "27": {
+              "location": [100, 1220],
+              "targeting_path_ids": {
+                "4": 0.143
+              }
+            },
+            "28": {
+              "location": [825, 1600],
+              "targeting_path_ids": {
+                "4": 0.519,
+                "6": 0.613
+              }
+            },
+            "29": {
+              "location": [400, 2035],
+              "targeting_path_ids": {
+                "4": 0.982,
+                "5": 0.985
+              }
+            },
+            "30": {
+              "location": [90, 1815],
+              "targeting_path_ids": {
+                "4": 0.858
+              }
+            },
+            "31": {
+              "location": [1250, 1910],
+              "targeting_path_ids": {
+                "5": 0.5
+              }
+            },
+            "32": {
+              "location": [1035, 2050],
+              "targeting_path_ids": {
+                "5": 0.688
+              }
+            },
+            "33": {
+              "location": [1460, 2050],
+              "targeting_path_ids": {
+                "5": 0.313
+              }
+            },
+            "34": {
+              "location": [715, 1950],
+              "targeting_path_ids": {
+                "5": 0.927,
+                "6": 0.845
+              }
+            },
+            "35": {
+              "location": [980, 1800],
+              "targeting_path_ids": {
+                "5": 0.628,
+                "6": 0.578
+              }
+            },
+            "36": {
+              "location": [1250, 1670],
+              "targeting_path_ids": {
+                "5": 0.499,
+                "6": 0.316
+              }
+            },
+            "37": {
+              "location": [1590, 1845],
+              "targeting_path_ids": {
+                "5": 0.332
+              }
+            },
+            "38": {
+              "location": [1785, 2000],
+              "targeting_path_ids": {
+                "5": 0.145
+              }
+            },
+            "39": {
+              "location": [1100, 1460],
+              "targeting_path_ids": {
+                "6": 0.343
+              }
+            },
+            "40": {
+              "location": [1485, 1530],
+              "targeting_path_ids": {
+                "6": 0.077
+              }
+            },
+            "41": {
+              "location": [795, 1320]
+            },
+            "42": {
+              "location": [1800, 1800]
+            }
+          },
+          "paths": [4, 5, 6]
+        },
+        "3": {
+          "name": "Top Right",
+          "location": [3500, 1925],
+          "is_alien": false,
+          "adjacent_territories": [2, 4, 5],
+          "building_slots": {
+            "43": {
+              "location": [3600, 1513],
+              "targeting_path_ids": {
+                "7": 0.326
+              }
+            },
+            "44": {
+              "location": [3500, 1775],
+              "targeting_path_ids": {
+                "7": 0.674,
+                "9": 0.936
+              }
+            },
+            "45": {
+              "location": [3560, 1240],
+              "targeting_path_ids": {
+                "7": 0.299
+              }
+            },
+            "46": {
+              "location": [3765, 1390],
+              "targeting_path_ids": {
+                "7": 0.239
+              }
+            },
+            "47": {
+              "location": [3785, 1630],
+              "targeting_path_ids": {
+                "7": 0.768
+              }
+            },
+            "48": {
+              "location": [3900, 1220],
+              "targeting_path_ids": {
+                "7": 0.143
+              }
+            },
+            "49": {
+              "location": [3175, 1600],
+              "targeting_path_ids": {
+                "7": 0.519,
+                "9": 0.613
+              }
+            },
+            "50": {
+              "location": [3600, 2035],
+              "targeting_path_ids": {
+                "7": 0.982,
+                "8": 0.985
+              }
+            },
+            "51": {
+              "location": [3910, 1815],
+              "targeting_path_ids": {
+                "7": 0.858
+              }
+            },
+            "52": {
+              "location": [2750, 1910],
+              "targeting_path_ids": {
+                "8": 0.5
+              }
+            },
+            "53": {
+              "location": [2965, 2050],
+              "targeting_path_ids": {
+                "8": 0.688
+              }
+            },
+            "54": {
+              "location": [2540, 2050],
+              "targeting_path_ids": {
+                "8": 0.313
+              }
+            },
+            "55": {
+              "location": [3285, 1950],
+              "targeting_path_ids": {
+                "8": 0.927,
+                "9": 0.845
+              }
+            },
+            "56": {
+              "location": [3020, 1800],
+              "targeting_path_ids": {
+                "8": 0.628,
+                "9": 0.578
+              }
+            },
+            "57": {
+              "location": [2750, 1670],
+              "targeting_path_ids": {
+                "8": 0.499,
+                "9": 0.316
+              }
+            },
+            "58": {
+              "location": [2410, 1845],
+              "targeting_path_ids": {
+                "8": 0.332
+              }
+            },
+            "59": {
+              "location": [2215, 2000],
+              "targeting_path_ids": {
+                "8": 0.145
+              }
+            },
+            "60": {
+              "location": [2900, 1460],
+              "targeting_path_ids": {
+                "9": 0.343
+              }
+            },
+            "61": {
+              "location": [2515, 1530],
+              "targeting_path_ids": {
+                "9": 0.077
+              }
+            },
+            "62": {
+              "location": [3205, 1320]
+            },
+            "63": {
+              "location": [2200, 1800]
+            }
+          },
+          "paths": [7, 8, 9]
+        },
+        "4": {
+          "name": "Bottom Right",
+          "location": [3500, 275],
+          "is_alien": false,
+          "adjacent_territories": [1, 3, 5],
+          "building_slots": {
+            "64": {
+              "location": [3600, 687],
+              "targeting_path_ids": {
+                "10": 0.326
+              }
+            },
+            "65": {
+              "location": [3500, 425],
+              "targeting_path_ids": {
+                "10": 0.674,
+                "12": 0.936
+              }
+            },
+            "66": {
+              "location": [3560, 960],
+              "targeting_path_ids": {
+                "10": 0.299
+              }
+            },
+            "67": {
+              "location": [3765, 810],
+              "targeting_path_ids": {
+                "10": 0.239
+              }
+            },
+            "68": {
+              "location": [3785, 570],
+              "targeting_path_ids": {
+                "10": 0.768
+              }
+            },
+            "69": {
+              "location": [3900, 980],
+              "targeting_path_ids": {
+                "10": 0.143
+              }
+            },
+            "70": {
+              "location": [3175, 600],
+              "targeting_path_ids": {
+                "10": 0.519,
+                "12": 0.613
+              }
+            },
+            "71": {
+              "location": [3600, 165],
+              "targeting_path_ids": {
+                "10": 0.982,
+                "11": 0.985
+              }
+            },
+            "72": {
+              "location": [3910, 385],
+              "targeting_path_ids": {
+                "10": 0.858
+              }
+            },
+            "73": {
+              "location": [2750, 290],
+              "targeting_path_ids": {
+                "11": 0.499
+              }
+            },
+            "74": {
+              "location": [2965, 150],
+              "targeting_path_ids": {
+                "11": 0.688
+              }
+            },
+            "75": {
+              "location": [2540, 150],
+              "targeting_path_ids": {
+                "11": 0.313
+              }
+            },
+            "76": {
+              "location": [3285, 250],
+              "targeting_path_ids": {
+                "11": 0.927,
+                "12": 0.845
+              }
+            },
+            "77": {
+              "location": [3020, 400],
+              "targeting_path_ids": {
+                "11": 0.628,
+                "12": 0.578
+              }
+            },
+            "78": {
+              "location": [2750, 530],
+              "targeting_path_ids": {
+                "11": 0.5,
+                "12": 0.316
+              }
+            },
+            "79": {
+              "location": [2410, 355],
+              "targeting_path_ids": {
+                "11": 0.332
+              }
+            },
+            "80": {
+              "location": [2215, 200],
+              "targeting_path_ids": {
+                "11": 0.145
+              }
+            },
+            "81": {
+              "location": [2900, 740],
+              "targeting_path_ids": {
+                "12": 0.343
+              }
+            },
+            "82": {
+              "location": [2515, 670],
+              "targeting_path_ids": {
+                "12": 0.077
+              }
+            },
+            "83": {
+              "location": [3205, 880]
+            },
+            "84": {
+              "location": [2200, 400]
+            }
+          },
+          "paths": [10, 11, 12]
+        },
+        "5": {
+          "name": "Center",
+          "location": [2000, 1100],
+          "is_alien": true,
+          "adjacent_territories": [1, 2, 3, 4],
+          "building_slots": {
+            "85": {
+              "location": [2000, 1225],
+              "targeting_path_ids": {
+                "13": 0.999,
+                "16": 0.999
+              }
+            },
+            "86": {
+              "location": [2000, 1400]
+            },
+            "87": {
+              "location": [2000, 975],
+              "targeting_path_ids": {
+                "14": 0.999,
+                "15": 0.999
+              }
+            },
+            "88": {
+              "location": [2000, 800]
+            },
+            "89": {
+              "location": [1800, 1100],
+              "targeting_path_ids": {
+                "13": 0.692,
+                "14": 0.692
+              }
+            },
+            "90": {
+              "location": [1520, 1100]
+            },
+            "91": {
+              "location": [2200, 1100],
+              "targeting_path_ids": {
+                "15": 0.692,
+                "16": 0.692
+              }
+            },
+            "92": {
+              "location": [2480, 1100]
+            },
+            "93": {
+              "location": [1550, 1260],
+              "targeting_path_ids": {
+                "13": 0.444
+              }
+            },
+            "94": {
+              "location": [2450, 1260],
+              "targeting_path_ids": {
+                "16": 0.444
+              }
+            },
+            "95": {
+              "location": [1675, 1180],
+              "targeting_path_ids": {
+                "13": 0.568
+              }
+            },
+            "96": {
+              "location": [2325, 1180],
+              "targeting_path_ids": {
+                "16": 0.568
+              }
+            },
+            "97": {
+              "location": [1675, 1020],
+              "targeting_path_ids": {
+                "14": 0.568
+              }
+            },
+            "98": {
+              "location": [2325, 1020],
+              "targeting_path_ids": {
+                "15": 0.568
+              }
+            },
+            "99": {
+              "location": [1550, 940],
+              "targeting_path_ids": {
+                "14": 0.444
+              }
+            },
+            "100": {
+              "location": [2450, 940],
+              "targeting_path_ids": {
+                "15": 0.444
+              }
+            },
+            "101": {
+              "location": [1865, 894],
+              "targeting_path_ids": {
+                "14": 0.966
+              }
+            },
+            "102": {
+              "location": [1730, 807],
+              "targeting_path_ids": {
+                "14": 0.832
+              }
+            },
+            "103": {
+              "location": [2135, 894],
+              "targeting_path_ids": {
+                "15": 0.966
+              }
+            },
+            "104": {
+              "location": [2270, 807],
+              "targeting_path_ids": {
+                "15": 0.832
+              }
+            },
+            "105": {
+              "location": [1865, 1306],
+              "targeting_path_ids": {
+                "13": 0.966
+              }
+            },
+            "106": {
+              "location": [1730, 1393],
+              "targeting_path_ids": {
+                "13": 0.832
+              }
+            },
+            "107": {
+              "location": [2135, 1306],
+              "targeting_path_ids": {
+                "16": 0.966
+              }
+            },
+            "108": {
+              "location": [2270, 1393],
+              "targeting_path_ids": {
+                "16": 0.832
+              }
+            }
+          },
+          "paths": [13, 14, 15, 16]
+        }
+      }           
+    }
+  },
+  "outposts": {
+    "1": {
+      "path_id1": 1,
+      "path_id2": 4,
+      "territory_id1": 1,
+      "territory_id2": 2,
+      "location": [500, 1100],
+      "is_air": false,
+      "is_sea": false
+    },
+    "2": {
+      "path_id1": 5,
+      "path_id2": 8,
+      "territory_id1": 2,
+      "territory_id2": 3,
+      "location": [2000, 1925],
+      "is_air": false,
+      "is_sea": false
+    },
+    "3": {
+      "path_id1": 7,
+      "path_id2": 10,
+      "territory_id1": 3,
+      "territory_id2": 4,
+      "location": [3500, 1100],
+      "is_air": false,
+      "is_sea": false
+    },
+    "4": {
+      "path_id1": 11,
+      "path_id2": 2,
+      "territory_id1": 4,
+      "territory_id2": 1,
+      "location": [2000, 275],
+      "is_air": false,
+      "is_sea": false
+    },
+    "5": {
+      "path_id1": 3,
+      "path_id2": 13,
+      "territory_id1": 1,
+      "territory_id2": 5,
+      "location": [1500, 825],
+      "is_air": false,
+      "is_sea": false
+    },
+    "6": {
+      "path_id1": 6,
+      "path_id2": 14,
+      "territory_id1": 2,
+      "territory_id2": 5,
+      "location": [1500, 1375],
+      "is_air": false,
+      "is_sea": false
+    },
+    "7": {
+      "path_id1": 9,
+      "path_id2": 15,
+      "territory_id1": 3,
+      "territory_id2": 5,
+      "location": [2500, 1375],
+      "is_air": false,
+      "is_sea": false
+    },
+    "8": {
+      "path_id1": 12,
+      "path_id2": 16,
+      "territory_id1": 4,
+      "territory_id2": 5,
+      "location": [2500, 825],
+      "is_air": false,
+      "is_sea": false
+    }
+  },
+  "init_spawn_territories": [1, 2, 3, 4]
+}

@@ -1,10 +1,16 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from '../../../components/common/organisms/LanguageSwitcher/LanguageSwitcher';
 
 const Profile: React.FC = () => {
+
+  const { t } = useTranslation(); // t is the translation function
+
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-3xl font-bold">Profile Page</h1>
-      <p className="text-lg mt-4">Build your profile on Conqueria Caps now!</p>
+      <h1 className="text-3xl font-bold">{t('profile.title')}</h1>
+      <p className="text-lg mt-4">{t('profile.description')}</p>
+      <LanguageSwitcher />
     </div>
   );
 };
