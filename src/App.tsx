@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { routes } from './routes/routes';
+import GlobalStyle from "./globalStyles";
 // import Breadcrumbs from './utils/components/breadcrumbs';
 import './App.css'
 import './config/i18n';
@@ -10,30 +11,33 @@ function App() {
   const isAuthenticated = true; // This will change based on your auth logic
 
   return (
-    <Router>
-      <div>
-        {/* <Breadcrumbs /> */}
-        <Routes>
-          {routes.map((route, index) => (
-            <Route
-              key={index}
-              path={route.path}
-              element={
-                route.requiresAuth ? (
-                  isAuthenticated ? (
-                    <route.component />
+    <>
+      <GlobalStyle />
+      <Router>
+        <div>
+          {/* <Breadcrumbs /> */}
+          <Routes>
+            {routes.map((route, index) => (
+              <Route
+                key={index}
+                path={route.path}
+                element={
+                  route.requiresAuth ? (
+                    isAuthenticated ? (
+                      <route.component />
+                    ) : (
+                      <Navigate to="/login" />
+                    )
                   ) : (
-                    <Navigate to="/login" />
+                    <route.component />
                   )
-                ) : (
-                  <route.component />
-                )
-              }
-            />
-          ))}
-        </Routes>
-      </div>
-    </Router>
+                }
+              />
+            ))}
+          </Routes>
+        </div>
+      </Router>
+    </>
   )
 }
 

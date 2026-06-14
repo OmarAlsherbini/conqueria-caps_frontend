@@ -15,6 +15,13 @@
     "title": "Connexion",
     "button": "Se connecter"
   },
+  "multiplayer_game": {
+    "button": "Jouer en Multijoueur",
+    "settings": {
+      "title": "Paramètres du Jeu",
+      "map_name": "5x5 Classique ConQ"
+    }
+  },
   "profile": {
     "title": "Page de profil",
     "description": "Créez votre profil sur Conqueria Caps maintenant!"

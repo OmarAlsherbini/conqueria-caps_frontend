@@ -15,6 +15,13 @@
     "title": "Anmeldung",
     "button": "Einloggen"
   },
+  "multiplayer_game": {
+    "button": "Mehrspieler spielen",
+    "settings": {
+      "title": "Spieleinstellungen",
+      "map_name": "5x5 Klassisch ConQ"
+    }
+  },
   "profile": {
     "title": "Profilseite",
     "description": "Erstellen Sie jetzt Ihr Profil auf Conqueria Caps!"

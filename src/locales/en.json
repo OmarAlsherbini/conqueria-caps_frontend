@@ -15,6 +15,13 @@
     "title": "Login",
     "button": "Log In"
   },
+  "multiplayer_game": {
+    "button": "Play Multiplayer",
+    "settings": {
+      "title": "Game Settings",
+      "map_name": "5x5 Classic ConQ"
+    }
+  },
   "profile": {
     "title": "Profile Page",
     "description": "Build your profile on Conqueria Caps now!"

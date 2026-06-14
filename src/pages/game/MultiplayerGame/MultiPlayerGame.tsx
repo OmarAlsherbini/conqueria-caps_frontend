@@ -20,6 +20,7 @@ import { Assets } from '@pixi/assets';
 // import mapData from '../../../assets/maps/map1/map1.json';
 import LoadingScreen from '../../../components/common/organisms/LoadingScreen/LoadingScreen';
 import MultiplayerGameSettings from '../../../components/common/organisms/MultiplayerGameSettings/MultiplayerGameSettings';
+import { useTranslation } from 'react-i18next';
 
 const MultiPlayerGame: React.FC = () => {
   const pixiContainer = useRef<HTMLDivElement>(null);
@@ -32,6 +33,8 @@ const MultiPlayerGame: React.FC = () => {
   const [loadingMessage, setLoadingMessage] = useState('');
   const [isLoaded, setIsLoaded] = useState(false);
   const [fadeIn, setFadeIn] = useState(false);
+
+  const { t } = useTranslation(); // t is the translation function
 
 
   // Define the original game dimensions
@@ -968,7 +971,7 @@ const MultiPlayerGame: React.FC = () => {
           disabled={!isAppInitialized}
           className="mb-4 ml-4 px-4 py-2 bg-blue-500 text-white rounded"
         >
-          Play Multiplayer
+          {t('multiplayer_game.button')}
         </button>
       )}
       <div ref={containerRef} className="flex flex-col items-start" style={{ position: 'relative', width: '100%', height: '100%' }}>

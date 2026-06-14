@@ -5,7 +5,7 @@ import MultiPlayerGame from '../../pages/game/MultiplayerGame/MultiPlayerGame';
 
 export const gameRoutes = [
   { path: '/game', component: Game, requiresAuth: true },
-  { path: '/game/flamethrower-simulation', component: FlamethrowerSimulation, },
-  { path: '/game/generalized-simulation', component: GeneralizedSimulation, },
-  { path: '/game/play-multiplayer', component: MultiPlayerGame, }
+  { path: '/game/flamethrower-simulation', component: FlamethrowerSimulation, requiresAuth: false, },
+  { path: '/game/generalized-simulation', component: GeneralizedSimulation, requiresAuth: false, },
+  { path: '/game/play-multiplayer', component: MultiPlayerGame, requiresAuth: false, }
 ];

@@ -15,6 +15,13 @@
     "title": "Iniciar sesión",
     "button": "Iniciar sesión"
   },
+  "multiplayer_game": {
+    "button": "Jugar Multijugador",
+    "settings": {
+      "title": "Configuración del Juego",
+      "map_name": "5x5 Clásico ConQ"
+    }
+  },
   "profile": {
     "title": "Página de perfil",
     "description": "Crea tu perfil en Conqueria Caps ahora!"
