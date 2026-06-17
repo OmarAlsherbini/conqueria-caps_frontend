@@ -7,6 +7,7 @@ This repository contains the React/Vite/Pixi frontend for Conqueria Caps.
 In this workspace, shared game rules live in the backend repository:
 
 - `../conqueria-caps_backend/docs/AI_CONTEXT.md`
+- `../conqueria-caps_backend/docs/CURRENT_STATE.md`
 - `../conqueria-caps_backend/docs/GAME_DESIGN.md`
 - `../conqueria-caps_backend/docs/COMBAT_SIMULATION_SPEC.md`
 - `../conqueria-caps_backend/docs/F2P_FAIRNESS.md`
@@ -17,6 +18,8 @@ Frontend-specific architecture guidance lives in:
 - `docs/FRONTEND_ARCHITECTURE.md`
 
 Read those docs before implementing gameplay UI. If this frontend repository is cloned without the backend docs, ask for the missing project context before changing core gameplay behavior.
+
+Before feature work, check `../conqueria-caps_backend/docs/CURRENT_STATE.md`. Do not assume backend endpoints, auth, WebSockets, or game-state contracts are stable until the current-state document says they are.
 
 ## Frontend Responsibilities
 
@@ -60,6 +63,7 @@ Frontend previews are allowed, but they must be presented as previews and reconc
 
 ## AI Work Rules
 
+- Check `../conqueria-caps_backend/docs/CURRENT_STATE.md` before implementing gameplay or API-facing UI.
 - Do not invent missing gameplay rules in frontend code.
 - Keep visual changes aligned with the art direction.
 - Do not refactor unrelated UI while implementing a feature.

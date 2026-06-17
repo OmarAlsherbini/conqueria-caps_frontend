@@ -11,6 +11,19 @@ This document defines frontend conventions for Conqueria Caps.
 - Pixi.js for game rendering
 - Tailwind or existing styling utilities where already established
 
+## Current Implementation Status
+
+The target frontend architecture below is not fully implemented yet. Check `../conqueria-caps_backend/docs/CURRENT_STATE.md` before API-facing or gameplay work.
+
+Current known gaps:
+
+- auth is stubbed as always authenticated;
+- Redux game state is placeholder-level;
+- API configuration is incomplete and currently uses Create React App style environment naming;
+- simulation pages use hardcoded prototype data;
+- the multiplayer page is not yet a playable loop;
+- WebSocket integration is not yet established.
+
 ## Responsibilities
 
 The frontend owns:
